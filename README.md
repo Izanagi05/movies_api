@@ -1,4 +1,4 @@
-# 🎬 Movie Watchlist API
+# 🎬 SanzFlix API
 Laravel REST API + JWT Authentication
 
 Backend REST API untuk aplikasi **Movie Watchlist** yang menangani autentikasi pengguna dan manajemen data favorite/watchlist movie.  

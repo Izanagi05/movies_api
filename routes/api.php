@@ -26,13 +26,13 @@ Route::post('/refresh', [AuthController::class, 'refresh']);
 
 Route::middleware('check.access.token')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
-    Route::get('/user', function () {
+    Route::get('/userLogin', function () {
         return auth()->user();
     });
 });
 
-// Route::prefix('watchlist')->middleware('check.access.token')->group(function () {
-Route::prefix('watchlist')->group(function () {
+Route::prefix('watchlist')->middleware('check.access.token')->group(function () {
+// Route::prefix('watchlist')->group(function () {
     Route::get('/{userId}', [WatchlistController::class, 'index']);
     Route::post('/add', [WatchlistController::class, 'add']);
     Route::put('/update/{id}', [WatchlistController::class, 'update']);
